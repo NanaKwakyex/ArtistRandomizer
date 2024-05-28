@@ -55,7 +55,7 @@ class ArtistViewController : UITableViewController {
         if let artistImageURL = URL(string: artist.ArtistImage) {
             cell.imageView?.image = PullImage(imageURL: artistImageURL)
         } else {
-            cell.imageView?.image = UIImage(named: "https://raw.githubusercontent.com/NanaKwakyex/IT315Project-JSON/main/Artists/default.png") // Placeholder image if URL is invalid
+            cell.imageView?.image = UIImage(named: "https://raw.githubusercontent.com/NanaKwakyex/ArtistRandomizer/main/Artists/default.png") // Placeholder image if URL is invalid
         }
         
         cell.imageView?.contentMode = .scaleAspectFill // Adjust content mode as needed
@@ -72,10 +72,10 @@ class ArtistViewController : UITableViewController {
 
         do {
             let imgData = try Data(contentsOf: imageURL)
-            img = UIImage(data: imgData) ?? UIImage(named: "https://raw.githubusercontent.com/NanaKwakyex/IT315Project-JSON/main/Artists/default.png") // Placeholder image if data is not a valid image
+            img = UIImage(data: imgData) ?? UIImage(named: "https://raw.githubusercontent.com/NanaKwakyex/ArtistRandomizer/main/Artists/default.png") // Placeholder image if data is not a valid image
         } catch {
             print("Error loading image: \(error)")
-            img = UIImage(named: "https://raw.githubusercontent.com/NanaKwakyex/IT315Project-JSON/main/Artists/default.png") ?? UIImage() // Placeholder image if error occurs
+            img = UIImage(named: "https://raw.githubusercontent.com/NanaKwakyex/ArtistRandomizer/main/Artists/default.png") ?? UIImage() // Placeholder image if error occurs
         }
 
         return img
@@ -93,7 +93,7 @@ class ArtistViewController : UITableViewController {
         //5. once the JSON data is serialized into Swift Objects one can iterate on each object within the dictionary and build the HikingTrail Object and add it to the Array.
      
     func getJSONData() {
-        let endPointURL = URL(string: "https://raw.githubusercontent.com/NanaKwakyex/IT315Project-JSON/main/Artist.json")
+        let endPointURL = URL(string: "https://raw.githubusercontent.com/NanaKwakyex/ArtistRandomizer/main/Artist.json")
 
         let dataBytes = try? Data(contentsOf: endPointURL!)
 
