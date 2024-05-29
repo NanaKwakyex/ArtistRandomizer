@@ -1,4 +1,4 @@
-Welcome to HarmoniQuest: Your Quest for Something New Starts Here
+# Welcome to HarmoniQuest: Your Quest for Something New Starts Here
 
 This project is a demo IOS Swift project made for Mobile development.
 
